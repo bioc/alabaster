@@ -10,8 +10,9 @@ Description:
     avoiding problems with missing packages when a staging method or loading function is dynamically requested.
     Obviously, this comes at the cost of needing to install more packages,
     so advanced users and application developers may prefer to install the required alabaster.* packages individually.
+Depends:
+    alabaster.base
 Imports:
-    alabaster.base,
     alabaster.matrix,
     alabaster.ranges,
     alabaster.se,
