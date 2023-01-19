@@ -1,0 +1,32 @@
+Package: alabaster
+Title: Umbrella for the Alabaster Framework
+Version: 0.99.0
+Date: 2023-01-10
+Authors@R: person("Aaron", "Lun", role=c("aut", "cre"), email="infinite.monkeys.with.keyboards@gmail.com")
+License: MIT + file LICENSE
+Description: 
+    Umbrella for the alabaster suite, providing a single-line import for all alabaster.* packages.
+    Installing this package ensures that all known alabaster.* packages are also installed,
+    avoiding problems with missing packages when a staging method or loading function is dynamically requested.
+    Obviously, this comes at the cost of needing to install more packages,
+    so advanced users and application developers may prefer to install the required alabaster.* packages individually.
+Imports:
+    alabaster.base,
+    alabaster.matrix,
+    alabaster.ranges,
+    alabaster.se,
+    alabaster.sce,
+    alabaster.spatial,
+    alabaster.string,
+    alabaster.vcf,
+    alabaster.bumpy,
+    alabaster.mae
+Suggests:
+    knitr,
+    rmarkdown,
+    BiocStyle
+VignetteBuilder: knitr
+RoxygenNote: 7.2.3
+biocViews:
+    DataRepresentation,
+    DataImport

@@ -1,0 +1,37 @@
+---
+title: Umbrella for the alabaster framework
+author:
+- name: Aaron Lun
+  email: infinite.monkeys.with.keyboards@gmail.com
+package: alabaster
+date: "Revised: January 18, 2023"
+output:
+  BiocStyle::html_document
+vignette: >
+  %\VignetteIndexEntry{alabaster umbrella}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, echo=FALSE}
+library(BiocStyle)
+self <- Githubpkg("ArtifactDB/alabaster.base");
+knitr::opts_chunk$set(error=FALSE, warning=FALSE, message=FALSE)
+```
+
+# Motivation
+
+This is an umbrella package for the **alabaster** framework that serves as an installation target to ensure that all (known) _alabaster.\*_ packages are installed.
+Doing so is necessary because various functions in `r Githubpkg("ArtifactDB/alabaster.base")` dynamically identify the packages required to (un)serialize a particular resource.
+By installing all _alabaster.\*_ packages at once, we ensure that the dynamic look-up does not fail due to a missing package.
+
+This umbrella is only provided for convenient installation and is not otherwise necessary for the functioning of **alabaster** framework.
+In fact, advanced users and package/application developers may prefer to install their required _alabaster.\*_ packages individually rather than relying on this umbrella.
+This reduces the number of dependent packages that need to be installed, which is possible in scenarios where a limited subset of resource types are to be processed. 
+
+# Session information {-}
+
+```{r}
+sessionInfo()
+```
+
